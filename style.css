@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+body {
+  background: linear-gradient(-45deg, #f8b4aa, #f08080, #ffdde1, #ff9a9e);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: "Bungee", sans-serif;
+  font-size: 48px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ff6b81;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 100%;
+  animation: floatHeart linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ff6b81;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart::after {
+  left: 15px;
+  top: 0;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-45deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200px) translateY(-1000px) rotate(-45deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body h2 {
+  color: #f08080;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-size: 40px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.open-btn {
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  margin-right: 10px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.open-btn:hover {
+  transform: scale(1.1);
+}
+
+.open-btn:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.open-btn img {
+  width: 50px;
+  height: auto;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8b4aa;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-color: white;
+  width: 90vw;
+  max-width: 700px;
+  aspect-ratio: 1 / 1;
+  padding: 60px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  animation: popup 0.25s ease;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.overlay.active .modal {
+  transform: scale(1);
+}
+
+.modal h2 {
+  color: #f08080;
+  padding-bottom: 10px;
+}
+
+.modal img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.upload-btn {
+  background-color: #f08080;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 26px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  margin-top: 25px;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.upload-btn:hover {
+  transform: scale(1.1);
+}
+
+.upload-btn:focus {
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  background-color: #f08080;
+  color: white;
+  font-family: "Bungee", sans-serif;
+  margin-top: 15px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 26px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 30px;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn:hover {
+  background: transparent;
+  border-color: #f08080;
+  color: #f08080;
+}
+
+.share-btn {
+  font-family: "Bungee", sans-serif;
+  background-color: #f08080;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 26px;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.share-btn:hover {
+  transform: scale(1.1);
+}
+
+.screenshot-hide-all {
+    display: none !important;
+}
