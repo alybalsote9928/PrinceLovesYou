@@ -152,7 +152,7 @@ body h2 {
   width: 90%;
   max-width: 500px;
   aspect-ratio: 1 / 1;
-  padding: 50px;
+  padding: 40px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -275,4 +275,5 @@ body h2 {
 #modalTitle:focus {
     border-bottom: 2px dashed #f08080;
 }
+
 
