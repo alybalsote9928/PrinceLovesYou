@@ -149,7 +149,7 @@ body h2 {
 
 .modal {
   background-color: white;
-  width: 400px;
+  width: 90%;
   max-width: 500px;
   aspect-ratio: 1 / 1;
   padding: 40px;
@@ -173,11 +173,18 @@ body h2 {
   padding-bottom: 10px;
 }
 
-.modal img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
+.image-square-wrapper {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.image-square-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .upload-btn {
@@ -275,6 +282,7 @@ body h2 {
 #modalTitle:focus {
     border-bottom: 2px dashed #f08080;
 }
+
 
 
 
