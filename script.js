@@ -41,12 +41,12 @@ imageUpload.addEventListener("change", function () {
 shareBtn.addEventListener("click", () => {
   const modal = overlay.querySelector(".modal");
 
-  const hideElements = document.querySelectorAll(
+  const hideElements = modal.querySelectorAll(
     'button, input[type="file"], label[for="imageUpload"]',
   );
   hideElements.forEach((el) => el.classList.add("screenshot-hide-all"));
 
-  html2canvas(modal).then((canvas) => {
+  html2canvas(modal, { scale: 2 }).then((canvas) => {
     canvas.toBlob((blob) => {
       const file = new File([blob], "screenshot.png", { type: "image/png" });
 
@@ -69,3 +69,5 @@ shareBtn.addEventListener("click", () => {
     });
   });
 });
+
+
