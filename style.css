@@ -263,3 +263,13 @@ body h2 {
 .screenshot-hide-all {
     display: none !important;
 }
+
+#modalTitle {
+    outline: none;
+    cursor: text;
+    min-width: 100px;
+    display: inline-block;
+}
+#modalTitle:focus {
+    border-bottom: 2px dashed #f08080;
+}
