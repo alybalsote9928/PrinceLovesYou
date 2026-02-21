@@ -149,10 +149,10 @@ body h2 {
 
 .modal {
   background-color: white;
-  width: 90vw;
-  max-width: 700px;
+  width: 90%;
+  max-width: 500px;
   aspect-ratio: 1 / 1;
-  padding: 60px;
+  padding: 50px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -231,6 +231,7 @@ body h2 {
   transition:
     transform 0.3s ease,
     filter 0.3s ease;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -250,6 +251,7 @@ body h2 {
   font-size: 30px;
   cursor: pointer;
   margin-top: 20px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition:
     transform 0.3s ease,
@@ -273,3 +275,4 @@ body h2 {
 #modalTitle:focus {
     border-bottom: 2px dashed #f08080;
 }
+
