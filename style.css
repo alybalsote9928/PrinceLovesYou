@@ -149,7 +149,7 @@ body h2 {
 
 .modal {
   background-color: white;
-  width: 90%;
+  width: 400px;
   max-width: 500px;
   aspect-ratio: 1 / 1;
   padding: 40px;
@@ -174,8 +174,8 @@ body h2 {
 }
 
 .modal img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -275,5 +275,6 @@ body h2 {
 #modalTitle:focus {
     border-bottom: 2px dashed #f08080;
 }
+
 
 
